@@ -1,0 +1,19 @@
+<article class="login">
+  <form [formGroup]="form" class="login__content" (submit)="onSubmit()">
+    <mat-form-field appearance="outline" class="login__input">
+      <mat-label>email</mat-label>
+      <input matInput formControlName="email" placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="login__input">
+      <mat-label>password</mat-label>
+      <input matInput formControlName="password" placeholder="Placeholder" />
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" class="login__submit">login</button>
+
+    <section class="login__redirect">
+      <a [routerLink]="['/register']"> register</a>
+    </section>
+  </form>
+</article>

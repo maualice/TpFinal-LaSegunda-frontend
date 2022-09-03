@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'gdp-notfound',
+  selector: 'app-notfound',
   templateUrl: './notfound.component.html',
   styleUrls: ['./notfound.component.scss']
 })
 export class NotfoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,) { }
 
   ngOnInit(): void {
   }
 
+  onClick(){
+    this.router.navigate(['/dashboard'])
+  }
 }

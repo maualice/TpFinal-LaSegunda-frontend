@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'gdp-login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       console.log(this.form.value);
       localStorage.setItem('isLogged', 'true');
-      this._router.navigate(['dashboard']);
+      this._router.navigate(['/dashboard']);
     } else {
       this.form.markAllAsTouched();
     }

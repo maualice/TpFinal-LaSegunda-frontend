@@ -6,9 +6,9 @@ import { DashboardComponent } from './dashboard.component';
 
 import { ComponentsModule, MaterialModule } from '../../shared/modules';
 
-import { NavbarComponent, CardComponent } from '../dashboard/components';
+import { NavbarComponent,ProductComponent } from '../dashboard/components';
 
-const components = [NavbarComponent, CardComponent];
+const components = [NavbarComponent, ProductComponent];
 
 @NgModule({
   declarations: [DashboardComponent, ...components],

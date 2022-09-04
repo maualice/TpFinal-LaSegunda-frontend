@@ -1,6 +1,13 @@
-.grid {
+/* .grid {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+} */
+section.products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center ;
+  align-items: center;
+  margin-top: 20px;
 }

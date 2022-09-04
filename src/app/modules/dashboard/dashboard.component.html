@@ -2,6 +2,7 @@
 
 <section class="products" >
   <app-product 
+  (addToCartClick)="addToCart($event)"
   [product]="product" 
   *ngFor="let product of products"></app-product>
 </section>

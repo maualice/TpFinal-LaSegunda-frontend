@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
 
 
@@ -10,6 +10,10 @@ import { Product } from '../../interfaces/product.interface';
 })
 export class ProductComponent {
   @Input() product!:Product;
+  @Output() addToCartClick=new EventEmitter<Product>();
   constructor() { }
 
+  onClick() :void{
+    this.addToCartClick.emit(this.product); 
+  }
 }

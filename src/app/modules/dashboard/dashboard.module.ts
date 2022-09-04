@@ -7,8 +7,9 @@ import { DashboardComponent } from './dashboard.component';
 import { ComponentsModule, MaterialModule } from '../../shared/modules';
 
 import { NavbarComponent,ProductComponent } from '../dashboard/components';
+import { CartComponent } from 'src/app/shared/components/cart/cart.component';
 
-const components = [NavbarComponent, ProductComponent];
+const components = [NavbarComponent, ProductComponent,CartComponent];
 
 @NgModule({
   declarations: [DashboardComponent, ...components],
@@ -18,5 +19,6 @@ const components = [NavbarComponent, ProductComponent];
     ComponentsModule,
     MaterialModule,
   ],
+  exports:[NavbarComponent]
 })
 export class DashboardModule {}

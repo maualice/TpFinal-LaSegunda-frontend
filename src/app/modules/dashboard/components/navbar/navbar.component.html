@@ -1,37 +1,33 @@
 <mat-toolbar class="bgcolor">
-  <button
+  <button [routerLink]="['/dashboard']"
+  routerLinkActive="active"
     mat-icon-button
     class="example-icon"
-    aria-label="Example icon-button with menu icon"
+    aria-label="Menu"
   >
-    <mat-icon>menu</mat-icon>
+    <mat-icon>shop</mat-icon>
   </button>
 
-  <span>My App</span>
+  <span>Electronics Store</span>
 
   <span class="example-spacer"></span>
 
-  <button
-    mat-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    home
-  </button>
 
   <button
     mat-button
     class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon"
   >
-    option
+    Option
   </button>
 
-  <button
+  <button [routerLink]="['/contact']" 
+  [routerLink]="['/contact']"
     mat-button
     class="example-icon"
-    aria-label="Example icon-button with share icon"
+    aria-label="Contact"
   >
-    contact
+   Contact
   </button>
+  <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
 </mat-toolbar>

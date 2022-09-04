@@ -6,5 +6,5 @@ export interface Product{
     brand:string
     //categoryId:number,
     //stock:number,
-    //qty:number 
+    qty:number 
 }

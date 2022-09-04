@@ -17,6 +17,8 @@ import { MatInputModule } from '@angular/material/input'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 const modules = [
 	MatToolbarModule,
@@ -35,6 +37,8 @@ const modules = [
 	MatSnackBarModule,
 	MatProgressSpinnerModule,
 	MatMenuModule,
+	MatRadioModule,
+	MatSelectModule
 ]
 @NgModule({
 	declarations: [],

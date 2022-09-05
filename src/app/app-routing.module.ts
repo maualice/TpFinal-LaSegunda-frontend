@@ -19,6 +19,7 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  { path: 'checkout', loadChildren: () => import('./modules/checkout/checkout.module').then(m => m.CheckoutModule) },
   {
     path: '**',
     component: NotfoundComponent,

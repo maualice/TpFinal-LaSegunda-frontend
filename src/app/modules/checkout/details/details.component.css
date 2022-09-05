@@ -1,0 +1,32 @@
+.container {
+    margin: 2rem auto;
+    width: 90%;
+  }
+  
+  table {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  th {
+    background-color: rgb(97, 167, 236);
+    color: rgb(7, 7, 7);
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  td {
+    background-color: #eee;
+    padding: 1rem;
+  }
+
+  
+.total {
+    color: #000;
+    font-size: 1.5rem;
+  }
+
+.container__total{
+  margin-top: 20px;
+}  

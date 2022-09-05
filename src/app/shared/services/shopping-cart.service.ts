@@ -32,7 +32,7 @@ export class ShoppingCartService{
     }
     
     private addToCart(product:Product):void{  
-        const isProductInCart=this.products.find(pro=>pro.id===product.id);
+        const isProductInCart=this.products.find(({_id})=>_id===product._id);
 
         if(isProductInCart){
             isProductInCart.qty += 1;

@@ -51,6 +51,13 @@ export class ShoppingCartService{
         const total= this.products.reduce((acc,prod)=> acc += prod.price * prod.qty,0)// puedo acceder a price xq le estoy aplicando reduce a products que es de tipo product
         this.totalSubject.next(total)
     }
+    
+    resetCart():void{
+        this.cartSubject.next([]);
+        this.totalSubject.next(0);
+        this.quantitySubject.next(0);
+        this.products=[];
+    }// esto es para que despues del checkout no me siga mostrando el valor total 
 
 
 }

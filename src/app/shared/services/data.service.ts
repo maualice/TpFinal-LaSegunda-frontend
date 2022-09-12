@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Order } from "../interfaces/order.interface";
 import { Store } from "../interfaces/stores.interfaces";
+import { map } from "rxjs/operators"
 
 
 
@@ -35,7 +36,10 @@ export class DataService {
     }
 
     getOneStore(id:string): Observable <Store> {
-      return this.http.get<Store>(`${this.apiURL}/stores/`+ id)
+      return this.http.get(`${this.apiURL}/stores/`+ id).pipe(map((response:any)=> {
+        const store:Store = response.store;
+        return store;
+      }))
     }
 
     saveOrder(order:Order): Observable <Order> {

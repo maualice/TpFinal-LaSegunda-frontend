@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <mat-toolbar>
+        <span>{{title}}</span>
+    </mat-toolbar>
+    <mat-card class="margin">
+       <form [formGroup]="form" (ngSubmit)="addStore()">
+        <mat-grid-list cols="4" rowHeight="70px">
+            <mat-grid-tile  [colspan]="2" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Nombre</mat-label>
+                <input matInput autocomplete="off" formControlName="name">
+                  <mat-error *ngIf="form.get('name')?.hasError('required')">
+                  El nombre de la tienda es <strong>obligatorio</strong>
+                  </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile  [colspan]="2" [rowspan]="5">
+                <img src="../../../../../assets/store.png" alt="store" class="sizeimage">
+            </mat-grid-tile>
+
+            <mat-grid-tile  [colspan]="2" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Ciudad</mat-label>
+                <input matInput autocomplete="off" formControlName="city">
+                  <mat-error *ngIf="form.get('city')?.hasError('required')">
+                      El nombre de la ciudad es <strong>obligatorio</strong>
+                  </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="2" [rowspan]="1" >
+            <mat-form-field class="ancho">
+              <mat-label>Dirección</mat-label>
+                <input matInput autocomplete="off" formControlName="address">
+                <mat-error *ngIf="form.get('address')?.hasError('required')">
+                  La dirección es <strong>obligatoria</strong>
+                </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="2" [rowspan]="1">
+            <mat-form-field class="ancho">
+              <mat-label>Horarios de atención</mat-label>
+                <input matInput autocomplete="off" formControlName="openingHours">
+                <mat-error *ngIf="form.get('openingHours')?.hasError('required')">
+                  Los horarios de atención son <strong>obligatorios</strong>
+                  </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="2" [rowspan]="1">
+              <button type="button" [routerLink]="['/dashboard/stores']" mat-raised-button class="bvolver">Volver</button>
+              <button type="submit" [disabled]="form.invalid" mat-raised-button class="baceptar">Aceptar</button>
+            </mat-grid-tile>
+        </mat-grid-list>    
+      </form>
+    </mat-card>
+</div>
+

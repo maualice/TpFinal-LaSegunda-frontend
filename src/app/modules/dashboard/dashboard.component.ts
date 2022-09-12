@@ -27,4 +27,10 @@ export class DashboardComponent implements OnInit {
     this.shoppingCartSvc.updateCart(product)
   }
 
+  /* selectedFile: any = null;
+
+  onFileSelected(event: any): void {
+      this.selectedFile = event.target.files[0] ?? null;
+      console.log(event)
+  } */
 }

@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+  }
+
+  .container{
+    margin-left:100px;
+    margin-right:200px;
+    margin-top:15px;
+
+  }
+
+  .container mat-toolbar{
+    background-color:rgb(12, 155, 160);
+    color:azure
+  }
+
+  .margin{
+    margin-top: 10px;
+  }
+
+  .ancho{
+    width:80%
+  }
+
+  .sizeimage{
+    width: 350px;
+    height: 300px;
+  }
+
+  .bvolver{
+margin-right: 20px;
+background-color:rgb(79, 148, 218);
+color:aliceblue
+  }
+
+  .baceptar{
+    background-color:rgb(12, 155, 160);
+    color:aliceblue
+  }

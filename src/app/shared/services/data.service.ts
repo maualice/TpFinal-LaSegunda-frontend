@@ -22,6 +22,22 @@ export class DataService {
         return this.http.get<Store[]>(`${this.apiURL}/stores`)
     }
 
+    deleteStore(id: string): Observable <Store> {
+      return this.http.delete<Store>(`${this.apiURL}/stores/`+ id)
+    }
+
+    saveStore(store:Store): Observable <Store> {
+      return this.http.post<Store>(`${this.apiURL}/stores`,store)
+    }
+  
+    editStore(store:Store): Observable <Store> {
+      return this.http.patch<Store>(`${this.apiURL}/stores/${store._id}`,store)
+    }
+
+    getOneStore(id:string): Observable <Store> {
+      return this.http.get<Store>(`${this.apiURL}/stores/`+ id)
+    }
+
     saveOrder(order:Order): Observable <Order> {
         return this.http.post<Order>(`${this.apiURL}/orders`,order)
     }//crear un service separado para esto

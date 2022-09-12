@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentsModule } from './shared/modules/components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherWidgetMainComponent } from './shared/components/weather-widget-main/weather-widget-main.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherWidgetMainComponent
   ],
   imports: [
     BrowserModule,

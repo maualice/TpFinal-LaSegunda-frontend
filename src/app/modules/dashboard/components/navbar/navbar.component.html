@@ -8,26 +8,33 @@
     <mat-icon>shop</mat-icon>
   </button>
 
-  <span>Electronics Store</span>
+  <span class="marca">Gregon</span>
 
   <span class="example-spacer"></span>
 
 
-  <button
+  <button routerLink="/dashboard/products"
     mat-button
-    class="example-icon favorite-icon"
+    class="sizeWord"
     aria-label="Example icon-button with heart icon"
   >
-    Option
+    Productos
+  </button>
+
+  <button routerLink="/dashboard/stores"
+    mat-button
+    class="sizeWord"
+    aria-label="Example icon-button with heart icon"
+  >
+    Tiendas
   </button>
 
   <button [routerLink]="['/contact']" 
-  [routerLink]="['/contact']"
     mat-button
-    class="example-icon"
+    class="sizeWord"
     aria-label="Contact"
   >
-   Contact
+   Contacto
   </button>
   <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
 </mat-toolbar>

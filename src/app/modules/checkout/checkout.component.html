@@ -3,54 +3,54 @@
     <form #checkoutForm="ngForm">
 
        <mat-form-field class="form__element">
-        <input matInput placeholder="Name" required
+        <input matInput placeholder="Nombre" required
        [(ngModel)]="model.name" name="name" 
        #name="ngModel"/>
            <mat-error *ngIf="!name.valid || name.pristine">
-               Name is required
+               El nombre es <span>obligatorio</span>
            </mat-error>
        </mat-form-field>
 
        <mat-radio-group class="form__element">
-           <p>Choose an option:</p>
-           <mat-radio-button value="pickup" (change)="onPickupOrDelivery(false)" >
-           Pickup
+           <p>Elija una opción:</p>
+           <mat-radio-button class="separacion" value="pickup" (change)="onPickupOrDelivery(false)" >
+           Retirar de la Tienda
            </mat-radio-button>
            <mat-radio-button value="delivery" (change)="onPickupOrDelivery(true)"checked>
-           Delivery
+           Envío a su domicilio
            </mat-radio-button>
        </mat-radio-group>
 
        <ng-container *ngIf="isDelivery;else showStores">
         <mat-form-field class="form__element">
-            <input matInput placeholder="Shipping Address" required
+            <input matInput placeholder="Dirección de su domicilio" required
             [(ngModel)]="model.shippingAddress" name="shippingAddress" 
             #shippingAddress="ngModel"/>
             <mat-error *ngIf="!shippingAddress.valid || shippingAddress.pristine">
-                Address is required
+                La direccion es <span>obligatoria</span>
             </mat-error>
         </mat-form-field>
 
         <mat-form-field class="form__element">
-            <input matInput placeholder="City" required
+            <input matInput placeholder="Ciudad" required
             [(ngModel)]="model.city" name="city" 
             #city="ngModel"/>
             <mat-error *ngIf="!city.valid || city.pristine">
-                City is required
+                El nombre de la ciudad es <span>obligatorio</span>
             </mat-error>
         </mat-form-field>
     </ng-container>
     
     <ng-template #showStores>
         <mat-form-field class="form__element">
-        <mat-label>Select me</mat-label>
+        <mat-label>Seleccione</mat-label>
         <mat-select name="store" #store="ngModel" [(ngModel)]="model.store" required>
             <mat-option [value]="tienda" *ngFor="let tienda of stores">
                 {{tienda.name}} - {{tienda.openingHours}}
             </mat-option> <!-- en value si quisiera guardar la info en una bd podria pasarle el id o nombre de la tienda -->
         </mat-select>
             <mat-error *ngIf="!store.valid || store.pristine">
-                Store is required
+                La tienda es obligatoria
             </mat-error>
         </mat-form-field>
     </ng-template>
@@ -59,9 +59,14 @@
 
 <app-details></app-details>
 
+
 <div class="container__button">
-    <button [disabled]="!checkoutForm.form.valid" mat-raised-button color="primary"
+    <button mat-raised-button class="buttonCancel"
+    type="button" (click)="onReset()">
+    Cancelar
+    </button>
+    <button [disabled]="!checkoutForm.form.valid" mat-raised-button class="buttonAcept"
     type="submit" (click)="onSubmit(checkoutForm)">
-    Checkout
+    Aceptar
     </button>
 </div>

@@ -1,13 +1,18 @@
 
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
 .bgcolor {
   background-color:rgb(97, 167, 236);
+  color:aliceblue;
+  font-size: 15px;
 }
 
+.marca{
+  font-size: 20px;
+}
 .mouseHover:hover{
   cursor:pointer;
+  
+}
+
+.sizeWord{
+  font-size: 20px;
 }

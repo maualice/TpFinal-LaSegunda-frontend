@@ -19,6 +19,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const modules = [
 	MatToolbarModule,
@@ -38,7 +42,11 @@ const modules = [
 	MatProgressSpinnerModule,
 	MatMenuModule,
 	MatRadioModule,
-	MatSelectModule
+	MatSelectModule,
+	MatTableModule,
+	MatPaginatorModule,
+	MatSortModule,
+	MatGridListModule
 ]
 @NgModule({
 	declarations: [],

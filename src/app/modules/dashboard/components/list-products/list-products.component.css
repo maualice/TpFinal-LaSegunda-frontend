@@ -1,0 +1,48 @@
+table {
+    width: 100%;
+  }
+
+  .container{
+    margin-left:100px;
+    margin-right:200px;
+    margin-top:15px;
+
+  }
+
+  .container mat-toolbar{
+    background-color:rgb(12, 155, 160);
+    color:azure
+  }
+
+  td.align{
+    text-align: right;
+  }
+.pad{
+  padding-right:50px
+}
+  .ancho{
+    width:20%;
+  }
+
+  a{
+    cursor:pointer
+  }
+
+  .pointer1{
+    color:#1878b0
+  }
+  .pointer2{
+    color:#1f516f
+  }
+  .pointer3{
+    color:#e15639
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  img{
+    width:40%
+  }

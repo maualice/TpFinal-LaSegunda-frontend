@@ -3,8 +3,9 @@ export interface Product{
     name:string,
     price:number,
     description:string,
-    brand:string
+    //brand:string,
+    image:{secure_url:string},
     //categoryId:number,
     //stock:number,
-    qty:number 
+   qty:number 
 }

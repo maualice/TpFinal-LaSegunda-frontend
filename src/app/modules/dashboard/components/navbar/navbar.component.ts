@@ -1,5 +1,8 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { NgModel } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent{
 
-  constructor(private router:Router) { }
+  constructor(public router:Router, public authService:AuthService) { }
+
+  //console.log(this.router);
 
   goToCheckout():void{
     this.router.navigate(['/checkout'])

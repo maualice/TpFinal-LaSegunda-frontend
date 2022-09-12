@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { Router } from '@angular/router'; //
 
 @Component({
   selector: 'app-register',
@@ -7,20 +9,43 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  form = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
+  /*
+  user = {
+    name: '',
+    email: '',
+    password: ''
+  }
+  */
+  
+  user = new FormGroup({
+    name: new FormControl('', { validators: [Validators.required] }),
+    email: new FormControl('', { validators: [Validators.email, Validators.required] }),
+    password: new FormControl('', { validators: [Validators.required, Validators.required] }),
   });
+  
 
-  constructor() {}
+  constructor(
+    private authService: AuthService,
+    private router:Router
+    ) {}
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    if (this.form.valid) {
-      console.log(this.form.value);
+  signUp() {
+    if (this.user.valid) {
+    console.log(this.user.value)
+    
+    this.authService.signUp(this.user.value)
+      .subscribe(
+        res => {
+          console.log(res)
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/dashboard']);
+        },
+        err => console.log(err)
+      ) 
     } else {
-    }
+      this.user.markAllAsTouched();
+    }                                 
   }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
+//import { AuthService } from 'src/app/shared/services/auth.service';
 
 import { AuthGuard } from '../../shared/guards';
 import { ListProductsComponent } from './components/list-products/list-products.component';
@@ -10,7 +11,7 @@ import { AddStoresComponent } from './components/add-stores/add-stores.component
 const routes: Routes = [
   {
     path: '',
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
     component: DashboardComponent,
   },
   { path: 'products',component: ListProductsComponent},
@@ -20,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)/*, AuthService*/],
   exports: [RouterModule],
 })
 export class DashboardRoutingModule {}

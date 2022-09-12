@@ -31,9 +31,9 @@ export class AddStoresComponent implements OnInit {
       city: ['', Validators.required],
       openingHours: ['', Validators.required],
     });
-    console.log(this.form.value);
+    //console.log(this.form.value);
     this.id = this.aRouter.snapshot.paramMap.get('id');
-    console.log(this.id);
+    //console.log(this.id);
     this.esEditar();
 
   }
@@ -63,21 +63,21 @@ export class AddStoresComponent implements OnInit {
   }
 
   esEditar() {
-    console.log('editar ejecutado');
-    console.log(this.id);
+    //console.log('editar ejecutado');
+    //console.log(this.id);
     if (this.id !== null) {
       this.title = 'Editar Tienda';
       this.dataSvc.getOneStore(this.id).subscribe({
         next: (store) => {
-          console.log('store', store);
-          console.log(this.form.value);
+          //console.log('store', store);
+          //console.log(this.form.value);
           this.form.patchValue({
             name: store.name,
             city: store.city,
             address: store.address,
             openingHours: store.openingHours,
           });
-          console.log(this.form.value);
+          //console.log(this.form.value);
         },
       });
     }

@@ -8,10 +8,40 @@
     <mat-icon>shop</mat-icon>
   </button>
 
-  <span class="marca">Gregon</span>
+  <span class="marca">GREGON</span>
 
   <span class="example-spacer"></span>
+  <ng-container *ngIf="!this.authService.loggedIn() else logout">
+    <button [routerLink]="['/login']" 
+    [routerLink]="['/login']"
+      mat-button
+      class="example-icon"
+      aria-label="Login"
+  >
+    Login
+    </button>
 
+    <button [routerLink]="['/register']" 
+    [routerLink]="['/register']"
+      mat-button
+      class="example-icon"
+      aria-label="Register"
+    >
+    Register
+    </button>
+  </ng-container>
+
+  <ng-template #logout >
+    <ng-container *ngIf="this.router.url == '/dashboard'">
+    <button (click)="this.authService.logout()"
+      mat-button
+      class="example-icon"
+      aria-label="Logout"
+  >
+    Logout
+    </button>
+  </ng-container>
+  </ng-template>
 
   <button routerLink="/dashboard/products"
     mat-button

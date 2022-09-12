@@ -74,6 +74,13 @@ export class CheckoutComponent implements OnInit {
       })
     )
     .subscribe()
-  }
-}// apra que no se pueda accerde a la ruta poniedo /checkout en url sin tener productos en carrito
+  }// apra que no se pueda accerde a la ruta poniedo /checkout en url sin tener productos en carrito
+
+onReset(){
+  this.shoppingCartSvc.resetCart();
+  this.router.navigate(['/dashboard']);
+}
+
+
+}
 

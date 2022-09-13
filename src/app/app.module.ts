@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentsModule } from './shared/modules/components/components.module';
-import { WeatherWidgetMainComponent } from './shared/components/weather-widget-main/weather-widget-main.component';
+//import { WeatherWidgetMainComponent } from './shared/components/weather-widget-main/weather-widget-main.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './shared/guards';
 import { TokenInterceptorService } from './shared/services/token-interceptor.service';
@@ -14,7 +14,7 @@ import { TokenInterceptorService } from './shared/services/token-interceptor.ser
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherWidgetMainComponent
+    //WeatherWidgetMainComponent
   ],
   imports: [
     BrowserModule,

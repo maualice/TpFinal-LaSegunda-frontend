@@ -12,11 +12,13 @@ import { CartComponent } from 'src/app/shared/components/cart/cart.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ListStoresComponent } from './components/list-stores/list-stores.component';
 import { AddStoresComponent } from './components/add-stores/add-stores.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { WeatherWidgetMainComponent } from 'src/app/shared/components/weather-widget-main/weather-widget-main.component';
 
 const components = [NavbarComponent, ProductComponent,CartComponent];
 
 @NgModule({
-  declarations: [DashboardComponent, ...components, ListProductsComponent, ListStoresComponent, AddStoresComponent],
+  declarations: [DashboardComponent, ...components, ListProductsComponent, ListStoresComponent, AddStoresComponent, FooterComponent,WeatherWidgetMainComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

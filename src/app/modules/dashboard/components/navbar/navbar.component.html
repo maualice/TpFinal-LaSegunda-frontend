@@ -43,6 +43,7 @@
   </ng-container>
   </ng-template>
 
+  <ng-container *ngIf="this.authService.isAdmin()">
   <button routerLink="/dashboard/products"
     mat-button
     class="sizeWord"
@@ -58,6 +59,7 @@
   >
     Tiendas
   </button>
+</ng-container>
 
   <!-- <button [routerLink]="['/contact']" 
     mat-button

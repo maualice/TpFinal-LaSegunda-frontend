@@ -4,15 +4,15 @@ import { RegisterComponent } from '../../modules/auth/views/register/register.co
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import {tap} from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
-  private URL = 'http://localhost:3000/api/v1'  //variable de entrono se podría usar
-
+  
+  private URL = `${environment.api}/api/v1`;
   constructor(private http: HttpClient, private router:Router) { }
 
  

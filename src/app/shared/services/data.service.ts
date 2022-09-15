@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { Order } from "../interfaces/order.interface";
 import { Store } from "../interfaces/stores.interfaces";
 import { map } from "rxjs/operators"
+import { environment } from "src/environments/environment";
 
 
 
@@ -13,8 +14,8 @@ import { map } from "rxjs/operators"
 
 export class DataService {
   
-    private apiURL='http://localhost:3000/api/v1';
-    
+    private apiURL=`${environment.api}/api/v1`;
+
     constructor(private http:HttpClient) {
   
     }

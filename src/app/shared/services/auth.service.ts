@@ -11,8 +11,10 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  
-  private URL = `${environment.api}/api/v1`;
+
+  private URL = 'https://tpfinal-lasegunda.herokuapp.com/api/v1';
+  //private URL = `${environment.api}/api/v1`;  no se conecta en el vercel
+  //private URL = 'http://localhost:3000/api/v1';
   constructor(private http: HttpClient, private router:Router) { }
 
  

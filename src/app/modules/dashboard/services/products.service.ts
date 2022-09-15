@@ -9,7 +9,10 @@ import { environment } from 'src/environments/environment';
   })
 
 export class ProductsService {
-    private apiURL= `${environment.api}/api/v1/products`;
+    //private apiURL= `${environment.api}/api/v1/products`;    no se conecta en el vercel
+    //private apiURL= 'http://localhost:3000/api/v1/products';
+    private apiURL= `https://tpfinal-lasegunda.herokuapp.com/api/v1/products`;
+    
     constructor(private http:HttpClient) {}
 
     getProducts(): Observable<Product[]> {

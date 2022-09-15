@@ -14,7 +14,9 @@ import { environment } from "src/environments/environment";
 
 export class DataService {
   
-    private apiURL=`${environment.api}/api/v1`;
+    private apiURL='https://tpfinal-lasegunda.herokuapp.com/api/v1';
+    //private apiURL=`${environment.api}/api/v1`;   no se conecta en el vercel
+    //private apiURL='http://localhost:3000/api/v1';
 
     constructor(private http:HttpClient) {
   
